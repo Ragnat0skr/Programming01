@@ -1,16 +1,19 @@
+// Programming 01, Part 2 (Tasks 3 and 4)
+// J Dive
+
 public class AssessmentPartTwo {
 	
 	public int scrabbleScore(String aWord)
 	{
 		// 03 -Scrabble Score
-		// Complete this method so that it returns the scrabble score for the word in aWord // A Guest
-		// In scrabble each letter is worth a number of points and each word is worth the
-		// sum of the scores of the letters in it. For this assignment we will ignore
-		// double/treble letter/word bonuses.
-		// The English language points per letter can be found at
-		// https://en.wikipedia.org/wiki/Scrabble_letter_distributions
-		// You will need to come up with a way of connecting each letter to its score and
-		// a way of identifying each letter in the word.
+		// Complete this method so that it returns the scrabble score for the word in aWord 							// ~ A Guest
+		// In scrabble each letter is worth a number of points and each word is worth the								// ~ A Guest
+		// sum of the scores of the letters in it. For this assignment we will ignore									// ~ A Guest
+		// double/treble letter/word bonuses.																			// ~ A Guest
+		// The English language points per letter can be found at														// ~ A Guest
+		// https://en.wikipedia.org/wiki/Scrabble_letter_distributions													// ~ A Guest
+		// You will need to come up with a way of connecting each letter to its score and								// ~ A Guest
+		// a way of identifying each letter in the word.																// ~ A Guest
 		
 		int sum = 0; // Initialise variables, sum will always start at 0
 		String[] letters = new String[aWord.length()]; // Creates string array as long as the characters in aWord
@@ -24,7 +27,7 @@ public class AssessmentPartTwo {
 			letters[i] = character; // Uses character as the current string variable to be tested
 			switch(character) // Select case but Java
 			{
-				case "E": case "A": case "I": case "O": case "N": case "R": case "T": case "L": case "S": case "U": { sum = sum + 1; break; }
+				case "A": case "E": case "I": case "O": case "N": case "R": case "T": case "L": case "S": case "U": { sum = sum + 1; break; }
 				case "D": case "G": { sum = sum + 2; break; } // From scrabble scores: each line has every letter giving that amount of points
 				case "B": case "C": case "M": case "P": { sum = sum + 3; break; }  // Scores sourced from Wikipedia (as requested)
 				case "F": case "H": case "V": case "W": case "Y": { sum = sum + 4; break; } // Score of each letter added to running total in sum variable
